@@ -1,6 +1,7 @@
 package StepDefinitions;
 
 import PageClass.PageClass;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -23,27 +24,30 @@ public class StepDefinition {
     }
 
     @When("Select The {string}")
-    public void select_the(String string) {
+    public void select_the(String Producttype) throws InterruptedException {
+        pageClass.producttypeselect(Producttype);
 
     }
 
-    @When("Choose The Brand {string}")
-    public void choose_the_brand(String string) {
-
+    @And("Choose The Brand {string}")
+    public void chooseTheBrandBrand(String brand) throws InterruptedException {
+        pageClass.selectbrand(brand);
     }
 
     @When("Choose For Whom {string}")
-    public void choose_for_whom(String string) {
-
+    public void choose_for_whom(String ForWhom) throws InterruptedException {
+        pageClass.chooseforwhom(ForWhom);
     }
-
     @When("Choose The Actions {string}")
-    public void choose_the_actions(String string) {
-
+    public void choose_the_actions(String Actions) throws InterruptedException {
+        pageClass.actiondd(Actions);
     }
 
     @Then("Verify The Filtered Results")
     public void verify_the_filtered_results() {
 
+
     }
+
+
 }
