@@ -45,6 +45,7 @@ public class StepDefinition {
 
     @Then("Verify The Filtered Results")
     public void verify_the_filtered_results() {
+        pageClass.filterresults();
 
 
     }
